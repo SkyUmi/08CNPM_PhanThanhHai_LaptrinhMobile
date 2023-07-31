@@ -17,7 +17,7 @@ class Header extends StatelessWidget {
       children: [
         if (!Responsive.isDesktop(context))
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: context.read<MenuAppController>().controlMenu,
           ),
         if (!Responsive.isMobile(context))
@@ -27,8 +27,8 @@ class Header extends StatelessWidget {
           ),
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-        Expanded(child: SearchField()),
-        ProfileCard()
+        const Expanded(child: SearchField()),
+        const ProfileCard()
       ],
     );
   }

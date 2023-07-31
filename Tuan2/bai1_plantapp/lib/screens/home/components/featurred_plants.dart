@@ -42,7 +42,7 @@ class FeaturePlantCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           left: kDefaultPadding,
           top: kDefaultPadding / 2,
           bottom: kDefaultPadding / 2,

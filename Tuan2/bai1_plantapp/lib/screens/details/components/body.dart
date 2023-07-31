@@ -12,8 +12,8 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ImageAndIcons(size: size),
-          TitleAndPrice(title: "Angelica", country: "Russia", price: 440),
-          SizedBox(height: kDefaultPadding),
+          const TitleAndPrice(title: "Angelica", country: "Russia", price: 440),
+          const SizedBox(height: kDefaultPadding),
           Row(
             children: <Widget>[
               SizedBox(
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
                 height: 84,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    shape: RoundedRectangleBorder(
+                    shape:const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(20),
                       ),
@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
                   onPressed: () {
                     // Hành động khi nhấn vào nút
                   },
-                  child: Text(
+                  child:const Text(
                     "Buy Now",
                     style: TextStyle(
                       color: Colors.white,
@@ -43,7 +43,7 @@ class Body extends StatelessWidget {
               Expanded(
                 child: TextButton(
                   onPressed: () {},
-                  child: Text("Description"),
+                  child:const Text("Description"),
                 ),
               ),
             ],

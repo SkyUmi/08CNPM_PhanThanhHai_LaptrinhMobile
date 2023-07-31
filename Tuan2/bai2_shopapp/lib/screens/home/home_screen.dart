@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPaddin / 2)
+        const SizedBox(width: kDefaultPaddin / 2)
       ],
     );
   }
