@@ -68,9 +68,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor_ns/flutter_statusbarcolor_ns.dart';
-import 'package:food_web/Components/default_button.dart';
 
-import 'menu_item.dart';
 
 class CustomAppBar extends StatelessWidget {
   final List<Map<String, String>> menuItems = [
