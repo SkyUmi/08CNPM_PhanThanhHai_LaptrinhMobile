@@ -1,5 +1,5 @@
-import 'package:covid_19/constant.dart';
-import 'package:covid_19/widgets/my_header.dart';
+import 'package:covid_19s/constant.dart';
+import 'package:covid_19s/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -89,6 +89,42 @@ class _InfoScreenState extends State<InfoScreen> {
                   PreventCard(
                     text:
                         "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wash_hands.png",
+                    title: "Wash your hands",
+                  ),
+                  PreventCard(
+                    text:
+                    "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wear_mask.png",
+                    title: "Wear face mask",
+                  ),
+                  PreventCard(
+                    text:
+                    "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wash_hands.png",
+                    title: "Wash your hands",
+                  ),
+                  PreventCard(
+                    text:
+                    "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wear_mask.png",
+                    title: "Wear face mask",
+                  ),
+                  PreventCard(
+                    text:
+                    "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wash_hands.png",
+                    title: "Wash your hands",
+                  ),
+                  PreventCard(
+                    text:
+                    "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
+                    image: "assets/images/wear_mask.png",
+                    title: "Wear face mask",
+                  ),
+                  PreventCard(
+                    text:
+                    "Since the start of the coronavirus outbreak some places have fully embraced wearing facemasks",
                     image: "assets/images/wash_hands.png",
                     title: "Wash your hands",
                   ),

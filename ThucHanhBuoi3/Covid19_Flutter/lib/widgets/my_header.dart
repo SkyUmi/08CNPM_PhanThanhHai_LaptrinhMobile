@@ -1,5 +1,5 @@
-import 'package:covid_19/constant.dart';
-import 'package:covid_19/info_screen.dart';
+import 'package:covid_19s/constant.dart';
+import 'package:covid_19s/info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -59,7 +59,8 @@ class _MyHeaderState extends State<MyHeader> {
               child: Stack(
                 children: <Widget>[
                   Positioned(
-                    top: (widget.offset < 0) ? 0 : widget.offset,
+                    // top: (widget.offset < 0) ? 0 : widget.offset,
+                    top: 20 - widget.offset / 2,
                     child: SvgPicture.asset(
                       widget.image,
                       width: 230,
@@ -77,7 +78,8 @@ class _MyHeaderState extends State<MyHeader> {
                       ),
                     ),
                   ),
-                  Container(), // I dont know why it can't work without container
+                  Container(
+                  ), // I dont know why it can't work without container
                 ],
               ),
             ),

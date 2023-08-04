@@ -1,6 +1,6 @@
-import 'package:covid_19/constant.dart';
-import 'package:covid_19/widgets/counter.dart';
-import 'package:covid_19/widgets/my_header.dart';
+import 'package:covid_19s/constant.dart';
+import 'package:covid_19s/widgets/counter.dart';
+import 'package:covid_19s/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -173,6 +173,74 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 4),
+                          blurRadius: 30,
+                          color: kShadowColor,
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Counter(
+                          color: kInfectedColor,
+                          number: 1046,
+                          title: "Infected", key: null,
+                        ),
+                        Counter(
+                          color: kDeathColor,
+                          number: 87,
+                          title: "Deaths", key: null,
+                        ),
+                        Counter(
+                          color: kRecovercolor,
+                          number: 46,
+                          title: "Recovered", key: null,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 4),
+                          blurRadius: 30,
+                          color: kShadowColor,
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Counter(
+                          color: kInfectedColor,
+                          number: 1046,
+                          title: "Infected", key: null,
+                        ),
+                        Counter(
+                          color: kDeathColor,
+                          number: 87,
+                          title: "Deaths", key: null,
+                        ),
+                        Counter(
+                          color: kRecovercolor,
+                          number: 46,
+                          title: "Recovered", key: null,
+                        ),
+                      ],
+                    ),
+                  ),
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -189,6 +257,48 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ],
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.all(20),
+                    height: 178,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 30,
+                          color: kShadowColor,
+                        ),
+                      ],
+                    ),
+                    child: Image.asset(
+                      "assets/images/map.png",
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.all(20),
+                    height: 178,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 30,
+                          color: kShadowColor,
+                        ),
+                      ],
+                    ),
+                    child: Image.asset(
+                      "assets/images/map.png",
+                      fit: BoxFit.contain,
+                    ),
                   ),
                   Container(
                     margin: EdgeInsets.only(top: 20),
