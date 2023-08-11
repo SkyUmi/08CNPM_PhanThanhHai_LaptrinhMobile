@@ -18,11 +18,11 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
-      padding: EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
+      padding: const EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
       color: kBgLightColor,
       child: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Column(
             children: [
               Row(
@@ -31,21 +31,21 @@ class SideMenu extends StatelessWidget {
                     "assets/images/Logo Outlook.png",
                     width: 46,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   // We don't want to show this close button on Desktop mode
-                  if (!Responsive.isDesktop(context)) CloseButton(),
+                  if (!Responsive.isDesktop(context)) const CloseButton(),
                 ],
               ),
-              SizedBox(height: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
               TextButton.icon(
                 onPressed: () {},
                 icon: WebsafeSvg.asset("assets/Icons/Edit.svg", width: 16),
-                label: Text(
+                label: const Text(
                   "New message",
                   style: TextStyle(color: Colors.white),
                 ),
                 style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: kDefaultPadding,
                   ),
                   shape: RoundedRectangleBorder(
@@ -55,18 +55,18 @@ class SideMenu extends StatelessWidget {
                 ),
               ).addNeumorphism(
                 topShadowColor: Colors.white,
-                bottomShadowColor: Color(0xFF234395).withOpacity(0.2),
+                bottomShadowColor: const Color(0xFF234395).withOpacity(0.2),
               ),
-              SizedBox(height: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
               TextButton.icon(
                 onPressed: () {},
                 icon: WebsafeSvg.asset("assets/Icons/Download.svg", width: 16),
-                label: Text(
+                label: const Text(
                   "Get messages",
                   style: TextStyle(color: kTextColor),
                 ),
                 style: TextButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: kDefaultPadding,
                   ),
                   shape: RoundedRectangleBorder(
@@ -75,7 +75,7 @@ class SideMenu extends StatelessWidget {
                   backgroundColor: kBgDarkColor,
                 ),
               ).addNeumorphism(),
-              SizedBox(height: kDefaultPadding * 2),
+              const SizedBox(height: kDefaultPadding * 2),
               // Menu Items
               SideMenuItem(
                 press: () {},
@@ -106,7 +106,7 @@ class SideMenu extends StatelessWidget {
                 isActive: false, key: UniqueKey(),
                 showBorder: false,
               ),
-              SizedBox(height: kDefaultPadding * 2),
+              const SizedBox(height: kDefaultPadding * 2),
               // Tags
               Tags(key: UniqueKey(),),
             ],

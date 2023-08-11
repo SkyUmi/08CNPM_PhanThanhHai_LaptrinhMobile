@@ -18,20 +18,20 @@ class Email {
 }
 
 List<Email> emails = List.generate(
-  demo_data.length,
+  demodata.length,
   (index) => Email(
-    name: demo_data[index]['name'],
-    image: demo_data[index]['image'],
-    subject: demo_data[index]['subject'],
-    isAttachmentAvailable: demo_data[index]['isAttachmentAvailable'],
-    isChecked: demo_data[index]['isChecked'],
-    tagColor: demo_data[index]['tagColor'],
-    time: demo_data[index]['time'],
+    name: demodata[index]['name'],
+    image: demodata[index]['image'],
+    subject: demodata[index]['subject'],
+    isAttachmentAvailable: demodata[index]['isAttachmentAvailable'],
+    isChecked: demodata[index]['isChecked'],
+    tagColor: demodata[index]['tagColor'],
+    time: demodata[index]['time'],
     body: emailDemoText,
   ),
 );
 
-List demo_data = [
+List demodata = [
   {
     "name": "Apple",
     "image": "assets/images/user_1.png",
@@ -65,7 +65,7 @@ List demo_data = [
     "subject": "The fastest way to Design",
     "isAttachmentAvailable": false,
     "isChecked": true,
-    "tagColor": Color(0xFF23CF91),
+    "tagColor": const Color(0xFF23CF91),
     "time": "10:43"
   },
   {
@@ -74,7 +74,7 @@ List demo_data = [
     "subject": "New job opportunities",
     "isAttachmentAvailable": false,
     "isChecked": false,
-    "tagColor": Color(0xFF3A6FF7),
+    "tagColor": const Color(0xFF3A6FF7),
     "time": "9:58"
   }
 ];

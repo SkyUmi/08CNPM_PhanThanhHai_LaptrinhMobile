@@ -34,13 +34,13 @@ class SideMenuItem extends StatelessWidget {
               "assets/Icons/Angle right.svg",
               width: 15,
             )
-                : SizedBox(width: 15),
-            SizedBox(width: kDefaultPadding / 4),
+                : const SizedBox(width: 15),
+            const SizedBox(width: kDefaultPadding / 4),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(bottom: 15, right: 5),
+                padding: const EdgeInsets.only(bottom: 15, right: 5),
                 decoration: showBorder
-                    ? BoxDecoration(
+                    ? const BoxDecoration(
                   border: Border(
                     bottom: BorderSide(color: Color(0xFFDFE2EF)),
                   ),
@@ -58,7 +58,7 @@ class SideMenuItem extends StatelessWidget {
                         height: 20,
                       ),
                     ),
-                    SizedBox(width: kDefaultPadding * 0.75),
+                    const SizedBox(width: kDefaultPadding * 0.75),
                     Text(
                       title,
                       style: Theme.of(context).textTheme.labelLarge?.copyWith(
@@ -66,8 +66,8 @@ class SideMenuItem extends StatelessWidget {
                         (isActive || isHover) ? kTextColor : kGrayColor,
                       ),
                     ),
-                    Spacer(),
-                    if (itemCount != null) CounterBadge(count: itemCount, key: UniqueKey(),)
+                    const Spacer(),
+                    CounterBadge(count: itemCount, key: UniqueKey(),)
                   ],
                 ),
               ),

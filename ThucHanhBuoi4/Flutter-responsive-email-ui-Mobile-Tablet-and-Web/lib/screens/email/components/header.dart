@@ -16,7 +16,7 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           // We need this back button on mobile only
-          if (Responsive.isMobile(context)) BackButton(),
+          if (Responsive.isMobile(context)) const BackButton(),
           IconButton(
             icon: WebsafeSvg.asset(
               "assets/Icons/Trash.svg",
@@ -45,7 +45,7 @@ class Header extends StatelessWidget {
             ),
             onPressed: () {},
           ),
-          Spacer(),
+          const Spacer(),
           // We don't need print option on mobile
           if (Responsive.isDesktop(context))
             IconButton(

@@ -21,14 +21,14 @@ class EmailCard extends StatelessWidget {
   Widget build(BuildContext context) {
     //  Here the shadow is not showing properly
     return Padding(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
           horizontal: kDefaultPadding, vertical: kDefaultPadding / 2),
       child: InkWell(
         onTap: press,
         child: Stack(
           children: [
             Container(
-              padding: EdgeInsets.all(kDefaultPadding),
+              padding: const EdgeInsets.all(kDefaultPadding),
               decoration: BoxDecoration(
                 color: isActive ? kPrimaryColor : kBgDarkColor,
                 borderRadius: BorderRadius.circular(15),
@@ -44,7 +44,7 @@ class EmailCard extends StatelessWidget {
                           backgroundImage: AssetImage(email.image),
                         ),
                       ),
-                      SizedBox(width: kDefaultPadding / 2),
+                      const SizedBox(width: kDefaultPadding / 2),
                       Expanded(
                         child: Text.rich(
                           TextSpan(
@@ -77,7 +77,7 @@ class EmailCard extends StatelessWidget {
                               color: isActive ? Colors.white70 : null,
                             ),
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           if (email.isAttachmentAvailable)
                             ColorFiltered(
                               colorFilter: ColorFilter.mode(
@@ -92,7 +92,7 @@ class EmailCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: kDefaultPadding / 2),
+                  const SizedBox(height: kDefaultPadding / 2),
                   Text(
                     email.body,
                     maxLines: 2,
@@ -107,9 +107,9 @@ class EmailCard extends StatelessWidget {
             ).addNeumorphism(
               blurRadius: 15,
               borderRadius: 15,
-              offset: Offset(5, 5),
+              offset: const Offset(5, 5),
               topShadowColor: Colors.white60,
-              bottomShadowColor: Color(0xFF234395).withOpacity(0.15),
+              bottomShadowColor: const Color(0xFF234395).withOpacity(0.15),
             ),
             if (!email.isChecked)
               Positioned(
@@ -118,31 +118,30 @@ class EmailCard extends StatelessWidget {
                 child: Container(
                   height: 12,
                   width: 12,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: kBadgeColor,
                   ),
                 ).addNeumorphism(
                   blurRadius: 4,
                   borderRadius: 8,
-                  offset: Offset(2, 2),
+                  offset: const Offset(2, 2),
                 ),
               ),
-            if (email.tagColor != null)
-              Positioned(
-                left: 8,
-                top: 0,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    email.tagColor,
-                    BlendMode.srcIn,
-                  ),
-                  child: WebsafeSvg.asset(
-                    "assets/Icons/Markup filled.svg",
-                    height: 18,
-                  ),
+            Positioned(
+              left: 8,
+              top: 0,
+              child: ColorFiltered(
+                colorFilter: ColorFilter.mode(
+                  email.tagColor,
+                  BlendMode.srcIn,
                 ),
-              )
+                child: WebsafeSvg.asset(
+                  "assets/Icons/Markup filled.svg",
+                  height: 18,
+                ),
+              ),
+            )
           ],
         ),
       ),

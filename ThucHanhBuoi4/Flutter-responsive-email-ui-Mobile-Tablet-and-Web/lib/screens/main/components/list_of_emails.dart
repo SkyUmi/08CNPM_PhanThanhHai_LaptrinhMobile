@@ -17,21 +17,21 @@ class ListOfEmails extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ListOfEmailsState createState() => _ListOfEmailsState();
+  ListOfEmailsState createState() => ListOfEmailsState();
 }
 
-class _ListOfEmailsState extends State<ListOfEmails> {
+class ListOfEmailsState extends State<ListOfEmails> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
       drawer: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 250),
-        child: SideMenu(),
+        constraints: const BoxConstraints(maxWidth: 250),
+        child: const SideMenu(),
       ),
       body: Container(
-        padding: EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
+        padding: const EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
         color: kBgDarkColor,
         child: SafeArea(
           right: false,
@@ -47,12 +47,12 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                     // Also we want to hide this menu icon on desktop
                     if (!Responsive.isDesktop(context))
                       IconButton(
-                        icon: Icon(Icons.menu),
+                        icon: const Icon(Icons.menu),
                         onPressed: () {
                           _scaffoldKey.currentState?.openDrawer();
                         },
                       ),
-                    if (!Responsive.isDesktop(context)) SizedBox(width: 5),
+                    if (!Responsive.isDesktop(context)) const SizedBox(width: 5),
                     Expanded(
                       child: TextField(
                         onChanged: (value) {},
@@ -64,7 +64,7 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                             padding: const EdgeInsets.all(
                                 kDefaultPadding * 0.75), //15
                             child: ColorFiltered(
-                              colorFilter: ColorFilter.mode(
+                              colorFilter: const ColorFilter.mode(
                                 Colors.black,
                                 BlendMode.srcIn,
                               ),
@@ -74,7 +74,7 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                               ),
                             ),
                           ),
-                          border: OutlineInputBorder(
+                          border: const OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             borderSide: BorderSide.none,
                           ),
@@ -84,14 +84,14 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                   ],
                 ),
               ),
-              SizedBox(height: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
               Padding(
                 padding:
                 const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Row(
                   children: [
                     ColorFiltered(
-                      colorFilter: ColorFilter.mode(
+                      colorFilter: const ColorFilter.mode(
                         Colors.black,
                         BlendMode.srcIn,
                       ),
@@ -100,17 +100,17 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                         width: 16,
                       ),
                     ),
-                    SizedBox(width: 5),
-                    Text(
+                    const SizedBox(width: 5),
+                    const Text(
                       "Sort by date",
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     MaterialButton(
                       minWidth: 20,
                       onPressed: () {},
                       child: ColorFiltered(
-                        colorFilter: ColorFilter.mode(
+                        colorFilter: const ColorFilter.mode(
                           Colors.black,
                           BlendMode.srcIn,
                         ),
@@ -123,7 +123,7 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                   ],
                 ),
               ),
-              SizedBox(height: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
               Expanded(
                 child: ListView.builder(
                   itemCount: emails.length,
