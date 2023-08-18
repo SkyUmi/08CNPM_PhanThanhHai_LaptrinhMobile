@@ -1,4 +1,4 @@
-import 'package:book_app/consttants.dart';
+import 'package:book_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class BookRating extends StatelessWidget {

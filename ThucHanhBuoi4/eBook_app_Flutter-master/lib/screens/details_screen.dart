@@ -1,4 +1,4 @@
-import 'package:book_app/consttants.dart';
+import 'package:book_app/constants.dart';
 import 'package:book_app/widgets/book_rating.dart';
 import 'package:book_app/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
@@ -120,7 +120,7 @@ class DetailsScreen extends StatelessWidget {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "Gary Venchuk",
+                                      text: "Gary Ven chu",
                                       style: TextStyle(color: kLightBlackColor),
                                     ),
                                   ],
@@ -284,7 +284,7 @@ class BookInfo extends StatelessWidget {
                           width: this.size.width * .3,
                           padding: EdgeInsets.only(top: this.size.height * .02),
                           child: Text(
-                            "When the earth was flat andeveryone wanted to win the gameof the best and people and winning with an A game with all the things you have.",
+                            "When the earth was flat and everyone wanted to win the game of the best and people and winning with an A game with all the things you have.",
                             maxLines: 5,
                             style: TextStyle(
                               fontSize: 10,

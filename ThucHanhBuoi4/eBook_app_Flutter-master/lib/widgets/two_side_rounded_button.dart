@@ -1,14 +1,14 @@
-import 'package:book_app/consttants.dart';
+import 'package:book_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class TwoSideRoundedButton extends StatelessWidget {
   final String text;
-  final double radious;
+  final double radius;
   final VoidCallback press;
   const TwoSideRoundedButton({
     Key? key,
     required this.text,
-    this.radious = 29,
+    this.radius = 29,
     required this.press,
   }) : super(key: key);
 
@@ -22,8 +22,8 @@ class TwoSideRoundedButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: kBlackColor,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(radious),
-            bottomRight: Radius.circular(radious),
+            topLeft: Radius.circular(radius),
+            bottomRight: Radius.circular(radius),
           ),
         ),
         child: Text(

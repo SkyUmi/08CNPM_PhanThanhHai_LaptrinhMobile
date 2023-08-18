@@ -1,4 +1,4 @@
-import 'package:book_app/consttants.dart';
+import 'package:book_app/constants.dart';
 import 'package:book_app/screens/details_screen.dart';
 import 'package:book_app/widgets/book_rating.dart';
 import 'package:book_app/widgets/reading_card_list.dart';
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                         ReadingListCard(
                           image: "assets/images/book-1.png",
                           title: "Crushing & Influence",
-                          auth: "Gary Venchuk",
+                          auth: "Gary Ven chu",
                           rating: 4.9,
                           pressDetails: () {
                             Navigator.push(
@@ -148,7 +148,7 @@ class HomeScreen extends StatelessWidget {
                                                 ),
                                               ),
                                               Text(
-                                                "Gary Venchuk",
+                                                "Gary Ven chu",
                                                 style: TextStyle(
                                                   color: kLightBlackColor,
                                                 ),
@@ -242,7 +242,7 @@ class HomeScreen extends StatelessWidget {
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                   Text(
-                    "Gary Venchuk",
+                    "Gary Ven chu",
                     style: TextStyle(color: kLightBlackColor),
                   ),
                   Padding(
@@ -287,7 +287,7 @@ class HomeScreen extends StatelessWidget {
               width: size.width * .3,
               child: TwoSideRoundedButton(
                 text: "Read",
-                radious: 24,
+                radius: 24,
                 press: () {},
               ),
             ),
