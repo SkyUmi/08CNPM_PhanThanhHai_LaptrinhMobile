@@ -18,7 +18,7 @@ class SignInForm extends StatefulWidget {
 // See you on next episode
 
 class _SignInFormState extends State<SignInForm> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   bool isShowLoading = false;
   bool isShowConfetti = false;
@@ -37,7 +37,7 @@ class _SignInFormState extends State<SignInForm> {
     Future.delayed(
       const Duration(seconds: 1),
       () {
-        if (_formKey.currentState!.validate()) {
+        if (formKey.currentState!.validate()) {
           // If everything looks good it shows the success animation
           check.fire();
           Future.delayed(
@@ -84,7 +84,7 @@ class _SignInFormState extends State<SignInForm> {
     return Stack(
       children: [
         Form(
-          key: _formKey,
+          key: formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -104,7 +104,7 @@ class _SignInFormState extends State<SignInForm> {
                   onSaved: (email) {},
                   decoration: InputDecoration(
                     prefixIcon: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: SvgPicture.asset("assets/icons/email.svg"),
                     ),
                   ),
@@ -134,8 +134,7 @@ class _SignInFormState extends State<SignInForm> {
                 ),
               ),
               Padding(
-                // padding: const EdgeInsets.only(top: 8, bottom: 24),
-                padding: const EdgeInsets.only(top: 8, bottom: 8),
+                padding: const EdgeInsets.only(top: 8, bottom: 24),
                 child: ElevatedButton.icon(
                   onPressed: () {
                     signIn(context);
@@ -145,7 +144,7 @@ class _SignInFormState extends State<SignInForm> {
                     minimumSize: const Size(double.infinity, 56),
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25),
+                        topLeft: Radius.circular(10),
                         topRight: Radius.circular(25),
                         bottomRight: Radius.circular(25),
                         bottomLeft: Radius.circular(25),
@@ -222,8 +221,7 @@ class CustomPositioned extends StatelessWidget {
             width: size,
             child: child,
           ),
-          //const Spacer(flex: 2),
-          // const Spacer(flex: 1),
+          const Spacer(flex: 2),
         ],
       ),
     );
